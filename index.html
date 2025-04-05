@@ -27,18 +27,11 @@
       color: var(--text);
     }
 
-    body {
-      display: flex;
-      flex-direction: column;
-      overflow-x: hidden;
-    }
-
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 24px 5%;
-      z-index: 2;
     }
 
     .logo {
@@ -62,7 +55,6 @@
       font-weight: 600;
       cursor: pointer;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      text-decoration: none;
     }
 
     .btn:hover {
@@ -70,21 +62,16 @@
       box-shadow: 0 0 10px var(--accent);
     }
 
-    main {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+    .hero {
       text-align: center;
-      padding: 60px 20px;
+      padding: 80px 20px 100px;
       position: relative;
-      z-index: 2;
+      z-index: 1;
     }
 
     h1 {
       font-size: 48px;
       font-weight: 800;
-      line-height: 1.2;
       margin-bottom: 20px;
     }
 
@@ -100,38 +87,6 @@
       max-width: 600px;
       margin: 0 auto 30px;
       line-height: 1.6;
-    }
-
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      max-width: 900px;
-      margin-top: 40px;
-    }
-
-    .card {
-      background-color: #1a1a1a;
-      padding: 25px;
-      border-radius: 16px;
-      border: 1px solid #2a2a2a;
-      box-shadow: 0 0 10px rgba(155, 107, 245, 0.2);
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card h3 {
-      color: var(--accent-light);
-      margin-bottom: 10px;
-      font-size: 20px;
-    }
-
-    .card p {
-      font-size: 15px;
-      color: var(--muted);
     }
 
     .bg-pattern {
@@ -155,32 +110,9 @@
       z-index: 0;
     }
 
-    hr {
-      border: none;
-      height: 4px;
-      width: 80%;
-      margin: 30px auto;
-      display: block;
-      background: linear-gradient(to right, var(--accent), var(--accent-light));
-      border-radius: 999px;
-      opacity: 0.9;
-      animation: fadeIn 1s ease-in-out;
-    }
-
     @keyframes floaty {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-20px); }
-    }
-
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-        transform: scaleX(0.5);
-      }
-      100% {
-        opacity: 0.9;
-        transform: scaleX(1);
-      }
     }
 
     @media (max-width: 768px) {
@@ -200,34 +132,19 @@
   </style>
 </head>
 <body>
+
   <div class="bg-pattern"></div>
   <div class="sphere"></div>
 
   <header>
     <div class="logo">Ahan-Amrit <span>by Bikram Sadhukhan</span></div>
-    <a href="contact.html" class="btn">Get in Touch</a>
+    <button onclick="window.location.href='contact.html'" class="btn">Get in Touch</button>
   </header>
 
-  <main>
-    <h1><span class="highlight">Ahan-Amrit</span> (AI-powered Food Scanner)</h1>
-    <hr><br>
-    <h2>Know What You're Really Eating</h2><br>
-    <p>Built for the conscious consumer. No more confusing labels or shady ingredients. Let Ahan-Amrit decode the science behind your snacks.</p>
-
-    <div class="features">
-      <div class="card">
-        <h3>🧠 AI-Driven Insights</h3>
-        <p>Uses cutting-edge OCR and AI to analyze food ingredients and explain their impact on your health in simple words.</p>
-      </div>
-      <div class="card">
-        <h3>🔍 Instant Breakdown</h3>
-        <p>No nutrition degree needed! Get a clear summary of preservatives, additives, or harmful chemicals in your food labels.</p>
-      </div>
-      <div class="card">
-        <h3>🌿 Smarter Choices</h3>
-        <p>Whether you're health-conscious or just curious, Ahan-Amrit helps you make better, more informed food decisions daily.</p>
-      </div>
-    </div>
+  <main class="hero">
+    <h1><span class="highlight">Ahan-Amrit</span> (AI-Powered Food Insight)</h1>
+    <p>Understand the truth behind every bite. We decode food labels using AI to help you make healthier choices with confidence.</p>
   </main>
+
 </body>
 </html>
