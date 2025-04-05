@@ -142,6 +142,28 @@
 .email-highlight:hover {
   background: rgba(255, 255, 255, 0.12);
 }
+  hr {
+  border: none;
+  height: 4px;
+  width: 80%;
+  margin: 30px auto; /* centers it horizontally */
+  display: block;
+  background: linear-gradient(to right, var(--accent), var(--accent-light)); /* Cool turquoise gradient */
+  border-radius: 999px;
+  opacity: 0.9;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scaleX(0.5);
+  }
+  100% {
+    opacity: 0.9;
+    transform: scaleX(1);
+  }
+}
 
   </style>
 </head>
@@ -157,7 +179,7 @@
   <main class="hero">
     <h1><span class="highlight">Ahan-Amrit</span> <br>(AI-Powered Food Label Reader)</h1>
     <p>Understand the truth behind every bite. We decode food labels using AI to help you make healthier choices with confidence.</p>
-    <p>Contact</p>
+    <hr><p>Contact</p>
     <p><span class="email-highlight">bikramsadhukhan505@gmail.com</span></p>
   </main>
 
